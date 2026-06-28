@@ -4,7 +4,6 @@ A Node.js/Express "Hello from CI/CD" application deployed through a fully automa
 
 **GitHub → CodePipeline → CodeBuild → Amazon ECR → Manual Approval → CodeDeploy (Blue/Green) → Amazon ECS Fargate behind an Application Load Balancer**, with CloudWatch + SNS monitoring.
 
-![Pipeline Diagram](pipeline-diagram.png)
 
 ---
 
