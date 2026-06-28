@@ -4,18 +4,27 @@
   "containerDefinitions": [
     {
       "name": "myapp-container",
-      "image": "<REPOSITORY_URI>:latest",
+      "image": "<IMAGE1_NAME>",
       "portMappings": [
         {
           "containerPort": 3000,
           "protocol": "tcp"
         }
       ],
-      "essential": true
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/myapp-task",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "myapp"
+        }
+      }
     }
   ],
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "256",
   "memory": "512",
-  "executionRoleArn": "arn:aws:iam::<account_id>:role/ecsTaskExecutionRole"
+  "executionRoleArn": "arn:aws:iam::207567786898:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::207567786898:role/ecsTaskExecutionRole"
 }
