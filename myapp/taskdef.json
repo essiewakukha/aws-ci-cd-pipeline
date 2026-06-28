@@ -1,0 +1,21 @@
+{
+  "family": "myapp-task",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "myapp-container",
+      "image": "<REPOSITORY_URI>:latest",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::<account_id>:role/ecsTaskExecutionRole"
+}
