@@ -177,3 +177,5 @@ git push
 ```
 
 CodePipeline picks up the push automatically. Approve the **Approval** stage in the console when prompted, and CodeDeploy will perform a zero-downtime Blue/Green shift to the new version.
+
+Members: Esther Wakukha, Joy Muthoka, Felicity Mwende, Leon Mwai
