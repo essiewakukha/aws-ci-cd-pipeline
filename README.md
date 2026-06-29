@@ -45,8 +45,7 @@ aws-ci-cd-pipeline/
 ├── Dockerfile                 # Pulls base image from ECR Public to avoid Docker Hub rate limits
 ├── buildspec.yml              # CodeBuild instructions
 ├── appspec.yml                 # CodeDeploy ECS Blue/Green spec
-├── taskdef.json                # ECS task definition template (<IMAGE1_NAME> placeholder)
-├── pipeline-diagram.png/.svg
+├── taskdef.json                # ECS task definition template (<IMAGE1_NAM
 └── README.md
 ```
 
